@@ -1,0 +1,219 @@
+@font-face { 
+	font-family: Sue Ellen Francisco;
+	src: url('Sue Ellen Francisco.ttf'); 
+}
+
+@font-face { 
+	font-family: OldSchool;
+	src: url('KrinkesDecorPERSONAL.ttf'); 
+}
+
+.land
+{
+	fill: #FF5050;
+	fill-opacity: 1;
+	stroke: #E0E0E0;
+	stroke-opacity: 1;
+	stroke-width: 0.7px;
+}
+
+.land:hover
+{
+	fill: #E71D32;
+	opacity: 1;
+	stroke: #E0E0E0;
+	stroke-opacity: 1;
+	stroke-width: 0.7px;
+}
+
+html
+{
+	background-color: #E0E0E0;
+	font-family: Helvetica;
+}
+
+body
+{
+	margin: 0;
+}
+
+div#map_wrapper
+{
+	float: left;
+	width: 100%;
+	/*background-image: url(map-background.jpg);*/
+	background-color: #E0E0E0;
+}
+
+div#map
+{
+
+	width: 60%;
+	margin: 0 auto;
+	margin-top: 80px;
+}
+
+svg
+{
+	width: 100%;
+	height: auto;
+	transform: scale(1);
+}
+
+
+
+
+
+
+
+ul#menu
+{
+	display: block;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 70px;
+	float: left;
+	font-family: Sue Ellen Francisco;
+	background-color: #323232;
+	color: #FFFFFF;
+	/*box-shadow: 0px 3px 5px #1F140A;*/
+	z-index: 1000;
+	padding-left: 15.5%;
+	padding-right: 15.5%;
+	margin:0;
+}
+
+li.clickable
+{
+	font-size: 20px;
+	float: left;
+	width: 23%;
+	height: 70px;
+	text-align: center;
+	display: inline-block;
+	padding-top: 19px;
+}
+
+li#logo
+{
+	font-family: OldSchool;
+	font-size: 30px;
+	float: left;
+	width: 23%;
+	height: 70px;
+	text-align: center;
+	display: inline-block;
+	padding-top: 19px;
+}
+
+li.menu_item a:hover
+{
+	color: #7CC7FF;
+}
+
+li.menu_item a
+{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+
+
+div#country_search_wrapper
+{
+	float: left;
+	background-color: #121212;
+	width: 100%;
+}
+
+div#country_search
+{
+	width: 30%;
+	margin: 0 auto;
+	padding: 20px 0 20px 0;
+	text-align: center;
+}
+
+a#search_button
+{
+	font-family: Sue Ellen Francisco;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+a#search_button:hover
+{
+	color: #7CC7FF;
+}
+
+input#search_input
+{
+	border: none;
+	background-color: #E0E0E0;
+	
+}
+
+div#arrow_down
+{
+	margin-left: 50%;
+	float: left;
+	width: 0; 
+	height: 0; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid #121212;
+}
+
+
+div#footer_wrapper
+{
+	background-color: #3D3D3D;
+	width: 100%;
+	float: left;
+}
+
+div#footer
+{
+	width: 60%;
+	margin: 0 auto;
+	padding: 10px 0 10px 0;
+	color: #EBEBEB;
+	text-align: center;
+	
+}
+
+div#main_wrapper
+{
+	background-color: #990000;
+	width: 100%;
+	float: left;
+}
+
+div#main
+{
+	width: 60%;
+	margin: 0 auto;
+}
+
+div#headline
+{
+	width: 100%;
+	float: left;
+	padding: 10px 0 10px 0;
+}
+
+div#article
+{
+	width:70%;
+	float: left;
+	padding: 10px 0 10px 0;
+}
+
+div#article_list
+{
+	width:30%;
+	float: left;
+	padding: 10px 0 10px 0;
+}
