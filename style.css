@@ -12,7 +12,7 @@
 {
 	fill: #FF5050;
 	fill-opacity: 1;
-	stroke: #E0E0E0;
+	stroke: #FFFFFF;
 	stroke-opacity: 1;
 	stroke-width: 0.7px;
 }
@@ -21,7 +21,7 @@
 {
 	fill: #E71D32;
 	opacity: 1;
-	stroke: #E0E0E0;
+	stroke: #FFFFFF;
 	stroke-opacity: 1;
 	stroke-width: 0.7px;
 }
@@ -42,7 +42,7 @@ div#map_wrapper
 	float: left;
 	width: 100%;
 	/*background-image: url(map-background.jpg);*/
-	background-color: #E0E0E0;
+	background-color: #FFFFFF;
 }
 
 div#map
@@ -89,7 +89,7 @@ li.clickable
 {
 	font-size: 20px;
 	float: left;
-	width: 23%;
+	width: 15%;
 	height: 70px;
 	text-align: center;
 	display: inline-block;
@@ -101,7 +101,7 @@ li#logo
 	font-family: OldSchool;
 	font-size: 30px;
 	float: left;
-	width: 23%;
+	width: 39%;
 	height: 70px;
 	text-align: center;
 	display: inline-block;
@@ -126,6 +126,8 @@ div#country_search_wrapper
 	float: left;
 	background-color: #121212;
 	width: 100%;
+	position: relative;
+	height: 69px;
 }
 
 div#country_search
@@ -141,6 +143,7 @@ a#search_button
 	font-family: Sue Ellen Francisco;
 	color: #FFFFFF;
 	text-decoration: none;
+	font-size: 15px;
 }
 
 a#search_button:hover
@@ -152,12 +155,19 @@ input#search_input
 {
 	border: none;
 	background-color: #E0E0E0;
-	
+	font-size: 20px;
 }
 
 div#arrow_down
 {
-	margin-left: 50%;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top: 69px;
+	z-index: 500;
+	/*margin-left: 50%;*/
 	float: left;
 	width: 0; 
 	height: 0; 
@@ -169,7 +179,7 @@ div#arrow_down
 
 div#footer_wrapper
 {
-	background-color: #3D3D3D;
+	background-color: #121212;
 	width: 100%;
 	float: left;
 }
@@ -178,7 +188,7 @@ div#footer
 {
 	width: 60%;
 	margin: 0 auto;
-	padding: 10px 0 10px 0;
+	padding: 30px 0 100px 0;
 	color: #EBEBEB;
 	text-align: center;
 	
@@ -186,7 +196,7 @@ div#footer
 
 div#main_wrapper
 {
-	background-color: #990000;
+	background-color: #FFFFFF;
 	width: 100%;
 	float: left;
 }
@@ -197,23 +207,57 @@ div#main
 	margin: 0 auto;
 }
 
-div#headline
-{
-	width: 100%;
-	float: left;
-	padding: 10px 0 10px 0;
-}
-
 div#article
 {
-	width:70%;
+	width:100%;
 	float: left;
 	padding: 10px 0 10px 0;
+	background-color: #E0E0E0;
+	margin: 15px 0 15px 0;
 }
 
 div#article_list
 {
-	width:30%;
+	width:100%;
 	float: left;
 	padding: 10px 0 10px 0;
+	background-color: #E0E0E0;
+	margin: 30px 0 15px 0;
+}
+
+div.stat
+{
+	height: 150px;
+	width: 150px;
+	margin: 0 calc((100% - 4*150px)/8);
+	float: left;
+}
+
+div#statistics
+{
+	width: 100%;
+	float: left;
+	margin: 15px 0 30px 0;
+	background-color: #E0E0E0;
+	padding: 20px 0 20px 0;
+}
+
+div#stat1
+{
+	background-color: #4178BE;
+}
+
+div#stat2
+{
+	background-color: #006D5D;
+}
+
+div#stat3
+{
+	background-color: #144D14;
+}
+
+div#stat4
+{
+	background-color: #562F72;
 }
