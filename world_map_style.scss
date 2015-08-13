@@ -1,0 +1,48 @@
+@font-face
+{
+	font-family: OldSchool;
+	src: url('KrinkesDecorPERSONAL.ttf');
+}
+
+$old-school-font: OldSchool;
+
+h1
+{
+	font-family: $old-school-font;
+	font-size: 34px;
+	color: #FFFFFF;
+	margin: 0;
+}
+
+body
+{
+	width: 100%;
+	margin: 0;
+
+	header
+	{
+		width: 100%;
+		height: 59vh;
+		background-color: #272727;
+		font-family: Helvetica, sans-serif;
+		font-size: 12px;
+		color: #FFFFFF;
+		text-align: center;
+		padding-top: 35vh;
+
+		#icons
+		{
+			margin-bottom: 2vh;
+			img
+			{
+				margin: 0 5px;
+				width: 7vh;
+			}
+		}
+
+		#next-page-text
+		{
+			margin: 35vh 0 1vh 0;
+		}
+	}
+}

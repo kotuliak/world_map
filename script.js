@@ -12,3 +12,19 @@
 	transform = 'scale(' + tranformIntValue + ')';
 	document.getElementById("world_map").setAttribute("transform", transform);
 });*/
+
+/*function init() {
+	window.addEventListener('scroll', function(e){
+		var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+			shrinkOn = 10,
+			header = document.getElementsByTagName('header');
+		if (distanceY > shrinkOn) {
+			header[0].id = 'scrolled';
+		} else {
+			if (header[0].hasAttribute('id')) {
+				header[0].removeAttribute('id');
+			}
+		}
+	});
+}
+window.onload = init();*/

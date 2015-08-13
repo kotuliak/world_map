@@ -1,0 +1,42 @@
+@mixin transform($arg){
+	-ms-transform: $arg; /* IE 9 */
+	-webkit-transform: $arg; /* Chrome, Safari, Opera */
+	transform: $arg;
+}
+
+#back
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1000px;
+	height: 1000px;
+	overflow: hidden;
+
+	svg
+	{
+		@include transform(translate(0, 0));
+	}
+}
+
+#mag-glass
+{
+	background-color: white;
+	position: absolute;
+	top: 400px;
+	left: 400px;
+	z-index: 1000;
+	border: 1px solid black;
+	width: 198px;
+	height: 198px;
+	overflow: hidden;
+	border-radius: 99px;
+
+	svg
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include transform(scale(2) translate(-200px, -200px));
+	}
+}
