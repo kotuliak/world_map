@@ -4,18 +4,48 @@
 	transform: $arg;
 }
 
+@mixin transition($arg){
+	-webkit-transition: $arg; /* Safari */
+	-moz-transition: $arg;
+	-o-transition: $arg;
+	transition: $arg;
+}
+
+$dark-blue: #0B0B0B;
+
+body {
+	margin: 0;
+}
+
 #back
 {
+	background-color: $dark-blue;
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 1000px;
-	height: 1000px;
+	width: 100vw;
+	height: 100vh;
 	overflow: hidden;
+	float: left;
 
 	svg
 	{
+		width: 100vw;
+		height: 100vh;
 		@include transform(translate(0, 0));
+
+		.land
+		{
+			fill: #4178BE;
+			fill-opacity: 1;
+			stroke: $dark-blue;
+			stroke-opacity: 1;
+			stroke-width:0.5;
+		}
+
+		.land:hover {
+			fill: #A53725;
+		}
 	}
 }
 
@@ -23,10 +53,10 @@
 {
 	background-color: white;
 	position: absolute;
-	top: 400px;
-	left: 400px;
-	z-index: 1000;
-	border: 1px solid black;
+	top: calc(50vh - 100px);
+	left: calc(50vw - 100px);
+	z-index: 100;
+	border: 1px solid #C7C7C7;
 	width: 198px;
 	height: 198px;
 	overflow: hidden;
@@ -34,9 +64,56 @@
 
 	svg
 	{
+		width: 100vw;
+		height: 100vh;
 		position: absolute;
 		top: 0;
 		left: 0;
-		@include transform(scale(2) translate(-200px, -200px));
+		@include transform(scale(2) translate( calc((50vw - 100px) / (0 - 2)), calc((50vh - 100px) / (0 - 2))));
+
+		.land
+		{
+			fill: #5AAAFA;
+			fill-opacity: 1;
+			stroke: white;
+			stroke-opacity: 1;
+			stroke-width:0.5;
+		}
+
+		.land:hover {
+			fill: #FFA573;
+		}
 	}
+}
+
+#overlap {
+	width: 100vw;
+	height: 100vh;
+	z-index: 200;
+	background: url('sky.jpg');
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#earth {
+	width: 200px;
+	height: 200px;
+	background: url('Earth.png') no-repeat;
+	background-size: 100% 100%;
+	border-radius: 100px;
+	position: absolute;
+	top: calc(50vh - 100px);
+	left: calc(50vw - 100px);
+	z-index: 300;
+}
+
+#main {
+	width: 100vw;
+	height: 400px;
+	background-color: #C7C7C7;
+	margin: 0;
+	float: left;
+	position: absolute;
+	top: 100vh;
 }

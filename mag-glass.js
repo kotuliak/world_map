@@ -25,14 +25,14 @@ $(document).ready(function(){
         if (isDown) {
             xTranslation += -(xPos - event.clientX);
             yTranslation += -(yPos - event.clientY);
-            var xTranslation2 = xTranslation - 400/zoom;
-            var yTranslation2 = yTranslation - 400/zoom;
+            var xTranslation2 = "calc(" + xTranslation + "px - (50vw - 100px) / "+ zoom +")";
+            var yTranslation2 = "calc(" + yTranslation + "px - (50vh - 100px) / "+ zoom +")";
             $("#svg1").css("transform","translate(" + xTranslation + "px," + yTranslation + "px)");
-            $("#svg2").css("transform","scale(" + zoom + ") translate(" + xTranslation2 + "px," + yTranslation2 + "px)");
+            $("#svg2").css("transform","scale(" + zoom + ") translate(" + xTranslation2 + "," + yTranslation2 + ")");
             $("#svg1").css("-ms-transform","translate(" + xTranslation + "px," + yTranslation + "px)");
-            $("#svg2").css("-ms-transform","scale(" + zoom + ") translate(" + xTranslation2 + "px," + yTranslation2 + "px)");
+            $("#svg2").css("-ms-transform","scale(" + zoom + ") translate(" + xTranslation2 + "," + yTranslation2 + ")");
             $("#svg1").css("-webkit-transform","translate(" + xTranslation + "px," + yTranslation + "px)");
-            $("#svg2").css("-webkit-transform","scale(" + zoom + ") translate(" + xTranslation2 + "px," + yTranslation2 + "px)");
+            $("#svg2").css("-webkit-transform","scale(" + zoom + ") translate(" + xTranslation2 + "," + yTranslation2 + ")");
             xPos = event.clientX;
             yPos = event.clientY;
         }
@@ -41,24 +41,24 @@ $(document).ready(function(){
     $("#mag-glass").on("mousewheel", function (event) {
         console.log(event.deltaY);
         event.preventDefault();
-        var xTranslation2 = 50;
-        var yTranslation2 = 50;
+        var xTranslation2 = "";
+        var yTranslation2 = "";
         if (event.deltaY > 0) {
             zoom = zoom * 1.5;
             if (zoom > 9) zoom = 9;
-            xTranslation2 = xTranslation - 400/zoom;
-            yTranslation2 = yTranslation - 400/zoom;
-            $("#svg2").css("transform","scale(" + zoom + ") translate(" + xTranslation2 + "px," + yTranslation2 + "px)");
-            $("#svg2").css("-ms-transform","scale(" + zoom + ") translate(" + xTranslation2 + "px," + yTranslation2 + "px)");
-            $("#svg2").css("-webkit-transform","scale(" + zoom + ") translate(" + xTranslation2 + "px," + yTranslation2 + "px)");
+            xTranslation2 = "calc(" + xTranslation + "px - (50vw - 100px) / "+ zoom +")";
+            yTranslation2 = "calc(" + yTranslation + "px - (50vh - 100px) / "+ zoom +")";
+            $("#svg2").css("transform","scale(" + zoom + ") translate(" + xTranslation2 + "," + yTranslation2 + ")");
+            $("#svg2").css("-ms-transform","scale(" + zoom + ") translate(" + xTranslation2 + "," + yTranslation2 + ")");
+            $("#svg2").css("-webkit-transform","scale(" + zoom + ") translate(" + xTranslation2 + "," + yTranslation2 + ")");
         } else {
             zoom = zoom / 1.5;
             if (zoom < 1.3) zoom = 1.3;
-            xTranslation2 = xTranslation - 400/zoom;
-            yTranslation2 = yTranslation - 400/zoom;
-            $("#svg2").css("transform","scale(" + zoom + ") translate(" + xTranslation2 + "px," + yTranslation2 + "px)");
-            $("#svg2").css("-ms-transform","scale(" + zoom + ") translate(" + xTranslation2 + "px," + yTranslation2 + "px)");
-            $("#svg2").css("-webkit-transform","scale(" + zoom + ") translate(" + xTranslation2 + "px," + yTranslation2 + "px)");
+            xTranslation2 = "calc(" + xTranslation + "px - (50vw - 100px) / "+ zoom +")";
+            yTranslation2 = "calc(" + yTranslation + "px - (50vh - 100px) / "+ zoom +")";
+            $("#svg2").css("transform","scale(" + zoom + ") translate(" + xTranslation2 + "," + yTranslation2 + ")");
+            $("#svg2").css("-ms-transform","scale(" + zoom + ") translate(" + xTranslation2 + "," + yTranslation2 + ")");
+            $("#svg2").css("-webkit-transform","scale(" + zoom + ") translate(" + xTranslation2 + "," + yTranslation2 + ")");
         }
      })
 

@@ -6,11 +6,16 @@
     <link rel="stylesheet" type="text/css" href="mag-glass.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="mag-glass.js"></script>
+    <script src="script.js"></script>
     <script src="jquery-mousewheel-3.1.13/jquery.mousewheel.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 </head>
 <body>
+    <div id="overlap"></div>
+    <div id="earth"></div>
     <div id="mag-glass">
-        <svg id="svg2" width="1000" height="1000" xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1009.110 665.250" preserveAspectRatio="xMinYMin meet">
+        <svg id="svg2" xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1009.110 665.250" preserveAspectRatio="xMidYMid meet">
             <defs>
                 <style type="text/css">
                     .land
@@ -209,7 +214,7 @@
         </svg>
     </div>
     <div id="back">
-        <svg id="svg1" width="1000" height="1000" xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1009.110 665.250" preserveAspectRatio="xMinYMin meet">
+        <svg id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1009.110 665.250" preserveAspectRatio="xMidYMid meet">
             <defs>
                 <style type="text/css">
                     .land
@@ -407,5 +412,7 @@
             </g>
         </svg>
     </div>
+    <div id="main"></div>
+    <footer></footer>
 </body>
 </html>
